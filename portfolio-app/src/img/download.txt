@@ -1,0 +1,62 @@
+﻿Mark Fullen
+Hilliard, Ohio 43026 | 614-309-7297 | mark3fullen@gmail.com 
+| GitHub | Blogs | LinkedIn |
+
+
+JUNIOR FULL STACK DEVELOPER
+Full-Stack Developer experienced in Ruby on Rails and JavaScript based programming and a background in customer service. Possess strong skills in communication and teamwork that help teams thrive. Passionate about music, learning new skills and helping people.
+
+
+TECHNICAL SKILLS
+Javascript, HTML, Ruby, CSS, React, Ruby on Rails, SQL
+
+
+TECHNICAL PROJECTS
+RosyTL - GitHub Repo | Deployed
+Timeline app where users can log in to create historical entries 
+* Authenticates users with B-crypt allowing seamless login and logout functionality
+* Displays React-Chrono a interactive timeline library for React 
+* Utilizes custom routes and full CRUD functionality for users and events through a rails server
+
+
+BlogApp - GitHub Repo | Demo
+Blog app for users to create and comment on blogs
+* Authenticates users with the B-crypt gem, ensuring security
+* Associated backend server to save blogs, comments, and users
+* Validates all user and CRUD event routes, allowing secure creation, modification, and deletion
+
+
+GameApp - GitHub Repo |
+React app where users can view assorted video games and gaming accessories
+* Creates sample video games with images and content using the Faker gem
+* Allows for the modification and creation of existing and new games with CRUD actions
+* Displays gaming equipment and prices from the associated backend server, so you can discover something new
+
+
+RickandMortyHub - GitHub Repo | Demo
+Simple React app displaying information about Rick and Morty 
+* Created with Rick and Morty API, to display a myriad of information from the beloved show
+* Utilized JavaScript methods and functions to display changing information
+
+
+EXPERIENCE
+Scene75          Hilliard, Ohio
+Guest Service Associate                06/2020 - 03/2021
+* Trained my fellow employees in the operation and handling of many attractions
+* Maintained trust and confidence with guests through social interaction
+
+
+Starliner Diner          Hilliard, Ohio
+Server                08/2020 - 12/2020
+* Spent many hours engaged in conversation with guests
+* Utilized the Aloha system to log orders and keep track of sales
+* Maintained server station with vigilant refills and cleaning
+
+
+EDUCATION
+Flatiron School         Online
+Full Stack Web Development, Ruby on Rails and JavaScript program         06/2021 - 10/2021
+
+
+Hilliard Davidson High School         Hilliard, Ohio
+High School Diploma        04/ 2019

@@ -4,6 +4,7 @@ import { BrowserRouter, Route } from 'react-router-dom'
 import Home from './lib/Home'
 import NavBar from './lib/NavBar'
 import Resume from './lib/Resume';
+import Contact from './lib/Contact'
 
 function App() {
   return (
@@ -14,7 +15,10 @@ function App() {
           <Home />
         </Route>
         <Route exact path="/resume">
-          <Resume path/>
+          <Resume />
+        </Route>
+        <Route exact path="/contact">
+          <Contact />
         </Route>
       </BrowserRouter>
     </div>
