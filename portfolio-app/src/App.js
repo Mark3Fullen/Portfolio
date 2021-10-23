@@ -8,9 +8,9 @@ import Contact from './lib/Contact'
 
 function App() {
   return (
-    <div className="App">
-      <NavBar />
+    <div className="App" style={{ background: 'linear-gradient(blue, black, blue)'}}>
       <BrowserRouter className="App">
+      <NavBar />
         <Route exact path="/">
           <Home />
         </Route>
