@@ -16,7 +16,6 @@ const Home = () => {
             
             <nav>
                 <input checked='checked' className='menu-toggler' id='menu-toggler' type='checkbox'/>
-                <label for='menu-toggler'></label>
                 <ul>
                     <li className="menu-item">
                         <a className="fa fa-linkedin" href='https://www.linkedin.com/in/mark-fullen-412a73158/' target='_blank' rel="noreferrer"></a>
