@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import './css/home.css';
 
 import PFP from './img/IMG_8024.jpg';
 
 
-const newHome = () => {
+const NewHome = () => {
+
+    const [clicked, setClicked] = useState(false);
 
     return (
 
@@ -12,7 +14,7 @@ const newHome = () => {
 
             <br/>
 
-            <img className="profilePic" src={PFP} />
+            <img className="profilePic" alt="profile" src={PFP} />
 
             <h2 className="namePlate">I'm Mark Fullen</h2>
 
@@ -36,7 +38,11 @@ const newHome = () => {
 
             <div>
 
-                <button className="moreButton">See more</button>
+                {
+
+                    clicked === false ? <button className="moreButton" onClick={() => setClicked(!clicked)}>See more</button> : <button className="lessButton" onClick={() => setClicked(!clicked)}>See less</button>
+
+                }
 
             </div>
 
@@ -47,4 +53,4 @@ const newHome = () => {
 
 }
 
-export default newHome
+export default NewHome

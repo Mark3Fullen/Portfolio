@@ -46,6 +46,16 @@
 
 }
 
+.lessButton {
+
+    margin: auto;
+    margin-top: 10%;
+    margin-bottom: 20%;
+    margin-left: 20%;
+    padding: 5px;
+
+}
+
 .hrLine {
     margin-left: 13%;
 }
