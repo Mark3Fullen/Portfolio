@@ -2,12 +2,12 @@ import React from "react";
 import { NavLink } from 'react-router-dom';
 import './css/sidebar.css';
 
-import { DiJavascript1 } from "react-icons/di"
-import { DiRuby } from "react-icons/di"
-import { DiReact } from "react-icons/di"
-import { DiRor } from "react-icons/di"
-import { DiHtml5 } from "react-icons/di"
-import { DiCss3 } from "react-icons/di"
+import CodeIcon from '@mui/icons-material/Code';
+import JavascriptIcon from '@mui/icons-material/Javascript';
+import HtmlIcon from '@mui/icons-material/Html';
+import CssIcon from '@mui/icons-material/Css';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import TerminalIcon from '@mui/icons-material/Terminal';
 
 const Sidebar = () => {
 
@@ -21,7 +21,7 @@ const Sidebar = () => {
 
                 <h2 className="nameTag">Mark Fullen</h2>
 
-                <p className="skillList"><DiJavascript1/>   <DiRuby/>   <DiReact/>   <DiRor/>   <DiHtml5/>  <DiCss3/></p>
+                <p className="skillList"><GitHubIcon/>  <CodeIcon/>   <JavascriptIcon/>   <HtmlIcon/>   <CssIcon/>  <TerminalIcon/></p>
 
                 <br/>
 
