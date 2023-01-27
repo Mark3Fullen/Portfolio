@@ -17,6 +17,7 @@
 }
 
 .nameTag {
+    margin: 10px;
     text-align: center;
     color: white;
     border-bottom: 2px solid white;
@@ -33,6 +34,7 @@
     opacity: 80%;
 
     height: 100%;
+    width: 20vw;
     background-image: url("../img/dope_drumshot.jpg");
     background-position: center;
     background-size: cover;
