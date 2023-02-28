@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from 'react-router-dom';
+import Typography from '@mui/material/Typography';
 import './css/sidebar.css';
 
 import CodeIcon from '@mui/icons-material/Code';
@@ -19,9 +20,9 @@ const Sidebar = () => {
 
             <div className="profile">
 
-                <h2 className="nameTag">Mark Fullen</h2>
+                <Typography variant="h4" className="nameTag">Mark Fullen</Typography>
 
-                <p className="skillList"><GitHubIcon/>  <CodeIcon/>   <JavascriptIcon/>   <HtmlIcon/>   <CssIcon/>  <TerminalIcon/></p>
+                <Typography variant="h5" className="skillList"><GitHubIcon/>  <CodeIcon/> <JavascriptIcon/> <HtmlIcon/> <CssIcon/> <TerminalIcon/></Typography>
 
                 <br/>
 
@@ -45,9 +46,9 @@ const Sidebar = () => {
                             <button className="link">Legacy View</button>
                         </NavLink>
 
-                        <NavLink to="/music">
+                        {/* <NavLink to="/music">
                             <button className="link">Music</button>
-                        </NavLink>
+                        </NavLink> */}
 
                     </div>
 

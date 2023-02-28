@@ -1,52 +1,63 @@
-import React, { useState } from "react";
-import './css/home.css';
+import React, { useEffect, useState } from "react";
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
+import './css/home.css';
 import PFP from './img/IMG_8024.jpg';
+
+const { Octokit } = require("@octokit/core");
 
 
 const NewHome = () => {
 
-    const [clicked, setClicked] = useState(false);
+    const [repos, setRepos] = useState([]);
+
+    useEffect(() => {
+        const fetchGitHubData = async () => {
+            const octokit = new Octokit({ auth: "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" });
+            const res = await octokit.request("GET /user/repos");
+            setRepos(res.data);
+        }
+
+        fetchGitHubData();
+    })
+    
+
 
     return (
 
-        <div className="homePage">
+        <Box className="homePage">
 
             <br/>
 
-            <img className="profilePic" alt="profile" src={PFP} />
+            <div className="homeHeader">
 
-            <h2 className="namePlate">I'm Mark Fullen</h2>
+                <img className="profilePic" alt="profile" src={PFP} />
 
-            <div className="aboutSec">
-
-                <div>
-                    <h3>Fullstack Developer</h3>
-                    <p>As, a web developer, I can create and manage small scale applications, websites and services</p>
-                </div>
-
-                <hr className="hrLine"/>
-
-                <div>
-                    <h3>Musician</h3>
-                    <p>As a musician, I have over 8+ years dedicated to my craft: practicing, writing, recording, planning, playing and everything that comes in between.</p>
-                </div>
+                <Typography variant="h3" className="namePlate">I'm Mark Fullen</Typography>
 
             </div>
 
-            <br/>
+            <Box className="homeGithubData">
+                {repos ? 
+                    repos.map(r => {
+                        const date = new Date(r.created_at)
+                        const options = { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', timeZoneName: 'short' };
+                        const formattedDate = date.toLocaleDateString('en-US', options);
+                        return (
+                            <Box className="homeGitHubRepos">
+                                <a href={r.html_url}><GitHubIcon/></a>
+                                <Typography variant="h5">{r.name}</Typography>
+                                <Typography variant="h6">Size: {r.size} somethings</Typography>
+                                <Typography variant="h6">Created: {formattedDate}</Typography>
+                            </Box>
+                        )
+                    })
+                : null}
+            </Box>
 
-            <div>
-
-                {
-
-                    clicked === false ? <button className="moreButton" onClick={() => setClicked(!clicked)}>See more</button> : <button className="lessButton" onClick={() => setClicked(!clicked)}>See less</button>
-
-                }
-
-            </div>
-
-        </div>
+        </Box>
 
     )
 

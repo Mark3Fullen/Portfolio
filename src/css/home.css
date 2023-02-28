@@ -1,61 +1,43 @@
-.homePage {
+.homePage{
     margin-left: 20vw;
-    background-color: beige;
-    height: 950px;
+    width: 80%;
+    height: 100%;
+}
+
+.homeHeader{
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    background-color: #f1f1f1;
 }
 
 .profilePic {
-    display: relative;
-    margin: 10px; 
-    margin-left: 70%;
-    margin-top: 5%;
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
-}
+    float: right;
+  }
 
-.namePlate {
-    display: block;
-    margin-top: -20%;
-    margin-right: 40%;
-    text-align: center  
-}
+  .namePlate {
+    font-family: 'Roboto', sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+    padding: 6rem;
+  }
 
-.aboutSec {
-    margin-right: 40%;
-    padding: 20px;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    overflow-wrap: break-word;
-}
+  .homeGithubData{
+    height: 32vw;
+    overflow: auto;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    align-content: flex-start;
+  }
 
-.aboutSec div {
-    margin: 20px;
-    padding-left: 10%;
-}
-
-.moreButton {
-
-    margin: auto;
-    margin-top: 10%;
-    margin-bottom: 20%;
-    margin-left: 20%;
-    padding: 5px;
-
-}
-
-.lessButton {
-
-    margin: auto;
-    margin-top: 10%;
-    margin-bottom: 20%;
-    margin-left: 20%;
-    padding: 5px;
-
-}
-
-.hrLine {
-    margin-left: 13%;
-}
+  .homeGitHubRepos{
+    width: calc(98%);
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding: 1rem;
+  }
