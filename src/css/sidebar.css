@@ -9,11 +9,10 @@
 }
 
 .profile {
-
-
-    margin: 75px;
+    margin: 50px;
     transform: translate(0%, -150%);
-
+    padding-bottom: 150px;
+    padding-top: 150px;
 }
 
 .nameTag {

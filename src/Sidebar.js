@@ -24,14 +24,6 @@ const Sidebar = () => {
 
                 <Typography variant="h5" className="skillList"><GitHubIcon/>  <CodeIcon/> <JavascriptIcon/> <HtmlIcon/> <CssIcon/> <TerminalIcon/></Typography>
 
-                <br/>
-
-                <br/>
-
-                <br/>
-
-                <br/>
-
                     <div className="navBar">
 
                         <NavLink to="/">

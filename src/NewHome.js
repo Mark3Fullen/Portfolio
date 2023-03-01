@@ -1,29 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import PFP from './img/IMG_8024.jpg';
+import data from './repo_info.json'
 
 import './css/home.css';
-import PFP from './img/IMG_8024.jpg';
-
-const { Octokit } = require("@octokit/core");
-
 
 const NewHome = () => {
 
-    const [repos, setRepos] = useState([]);
+    console.log(data);
 
-    useEffect(() => {
-        const fetchGitHubData = async () => {
-            const octokit = new Octokit({ auth: "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" });
-            const res = await octokit.request("GET /user/repos");
-            setRepos(res.data);
-        }
-
-        fetchGitHubData();
-    })
-    
-
+    let repos = data
 
     return (
 
@@ -35,22 +23,24 @@ const NewHome = () => {
 
                 <img className="profilePic" alt="profile" src={PFP} />
 
-                <Typography variant="h3" className="namePlate">I'm Mark Fullen</Typography>
+                <div className="namePlate">
+                    <Typography variant="h3" className="namePlateTitle">I'm Mark Fullen</Typography>
+                    <Typography variant="h5">Web Developer, Musician, Human Being</Typography>
+                    <Typography variant="h6">(Definitely not a Cloud Person)</Typography>
+                </div>
+                
 
             </div>
 
             <Box className="homeGithubData">
                 {repos ? 
                     repos.map(r => {
-                        const date = new Date(r.created_at)
-                        const options = { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', timeZoneName: 'short' };
-                        const formattedDate = date.toLocaleDateString('en-US', options);
                         return (
                             <Box className="homeGitHubRepos">
-                                <a href={r.html_url}><GitHubIcon/></a>
+                                <a href={r.url}><GitHubIcon/></a>
                                 <Typography variant="h5">{r.name}</Typography>
                                 <Typography variant="h6">Size: {r.size} somethings</Typography>
-                                <Typography variant="h6">Created: {formattedDate}</Typography>
+                                <Typography variant="h6">Created: {r.created}</Typography>
                             </Box>
                         )
                     })

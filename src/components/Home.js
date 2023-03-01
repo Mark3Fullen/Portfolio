@@ -12,22 +12,22 @@ const Home = () => {
                 <input checked='checked' className='menu-toggler' id='menu-toggler' type='checkbox'/>
                 <ul>
                     <li className="menu-item">
-                        <a className="fa fa-linkedin" href='https://www.linkedin.com/in/mark-fullen-412a73158/' target='_blank' rel="noreferrer"></a>
+                        <a className="fa fa-linkedin" href='https://www.linkedin.com/in/mark-fullen-412a73158/' target='_blank' rel="noreferrer"> </a>
                     </li>
                     <li className="menu-item">
-                        <a className='fa fa-medium' href='https://medium.com/@mark3fullen' target='_blank' rel="noreferrer"></a>
+                        <a className='fa fa-medium' href='https://medium.com/@mark3fullen' target='_blank' rel="noreferrer"> </a>
                     </li>
                     <li className="menu-item">
-                        <a className='fa fa-github' href='https://github.com/Mark3Fullen' target='_blank' rel="noreferrer"></a>
+                        <a className='fa fa-github' href='https://github.com/Mark3Fullen' target='_blank' rel="noreferrer"> </a>
                     </li>
                     <li className="menu-item">
-                        <a className='fa fa-file' href='https://docs.google.com/document/d/1tc6DgPdToboIcybJaSVZBZfWQnboYFbUSK57O2aC060/edit?usp=sharing' target='_blank' rel="noreferrer"></a>
+                        <a className='fa fa-file' href='https://docs.google.com/document/d/1tc6DgPdToboIcybJaSVZBZfWQnboYFbUSK57O2aC060/edit?usp=sharing' target='_blank' rel="noreferrer"> </a>
                     </li>
                     <li className="menu-item">
-                        <a className='fa fa-instagram' href='https://www.instagram.com/markfullen/?hl=en' target='_blank' rel="noreferrer"></a>
+                        <a className='fa fa-instagram' href='https://www.instagram.com/markfullen/?hl=en' target='_blank' rel="noreferrer"> </a>
                     </li>
                     <li className="menu-item">
-                        <a className='fa fa-envelope' href='mailto:mark3fullen@gmail.com' target='_blank' rel="noreferrer"></a>
+                        <a className='fa fa-envelope' href='mailto:mark3fullen@gmail.com' target='_blank' rel="noreferrer"> </a>
                     </li>
                 </ul>
             </nav>
