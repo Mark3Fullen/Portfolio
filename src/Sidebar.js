@@ -34,10 +34,6 @@ const Sidebar = () => {
                             <button className="link">Resume</button>
                         </NavLink>
 
-                        <NavLink to="/oldHome">
-                            <button className="link">Legacy View</button>
-                        </NavLink>
-
                         {/* <NavLink to="/music">
                             <button className="link">Music</button>
                         </NavLink> */}

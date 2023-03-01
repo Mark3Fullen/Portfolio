@@ -1,6 +1,6 @@
 .sidebar {
     height: 100%;
-    width: 400px;
+    width: calc(20%);
     position: fixed;
     z-index: 1;
     top: 0;
@@ -9,20 +9,20 @@
 }
 
 .profile {
-    margin: 50px;
+    padding: 25px;
     transform: translate(0%, -150%);
-    padding-bottom: 150px;
-    padding-top: 150px;
 }
 
 .nameTag {
     margin: 10px;
+    padding: 10px;
     text-align: center;
     color: white;
     border-bottom: 2px solid white;
 }
 
 .skillList {
+    padding: 25px;
     font-size: 25px;
     text-align: center;
     color: white;
@@ -33,7 +33,7 @@
     opacity: 80%;
 
     height: 100%;
-    width: 20vw;
+    width: calc(102%);
     background-image: url("../img/dope_drumshot.jpg");
     background-position: center;
     background-size: cover;
