@@ -39,20 +39,26 @@ const NewHome = () => {
 
             </div>
 
-            <Box className="homeGithubData">
-                {repos ? 
-                    repos.map(r => {
-                        return (
-                            <Box className="homeGitHubRepos">
-                                <a href={r.url}><GitHubIcon/></a>
-                                <Typography variant="h5">{r.name}</Typography>
-                                <Typography variant="h6">Size: {r.size} somethings</Typography>
-                                <Typography variant="h6">Created: {r.created}</Typography>
-                            </Box>
-                        )
-                    })
-                : null}
-            </Box>
+            <div className="homeGithubParent">
+
+                <Typography></Typography>
+
+                <Box className="homeGithubData">
+                    {repos ? 
+                        repos.map(r => {
+                            return (
+                                <Box className="homeGitHubRepos">
+                                    <a href={r.url}><GitHubIcon/></a>
+                                    <Typography variant="h5">{r.name}</Typography>
+                                    <Typography variant="h6">Size: {r.size} obj</Typography>
+                                    <Typography variant="h6">Created: {r.created}</Typography>
+                                </Box>
+                            )
+                        })
+                    : null}
+                </Box>
+
+            </div>
 
         </Box>
 

@@ -1,66 +1,70 @@
 .homePage{
-    margin-left: calc(20%);
-    width: calc(80%);
-    height: 100%;
+  margin-left: 20%;
+  padding: 0 2%;
+  height: 100%;
 }
 
 .homeHeader{
-    display: block;
-    text-align: center;
-    padding: 1rem;
-    background-color: beige;
-    border-radius: 5%;
+  display: block;
+  text-align: center;
+  background-color: #fff;
+  padding: 1rem;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
 }
 
 .profilePic{
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    float: right;
-  }
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  float: right;
+}
 
-  .namePlate{
-    font-family: 'Roboto', sans-serif;
-    font-size: 48px;
-    font-weight: bold;
-    padding: 3rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+.namePlate{
+  font-family: 'Roboto', sans-serif;
+  font-size: 48px;
+  font-weight: bold;
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
-  .namePlateTitle{
-    border-bottom: black .2rem solid;
-    width: 40%;
-  }
+.namePlateTitle{
+  border-bottom: black .2rem solid;
+  width: 40%;
+}
 
-  .namePlateLinks{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+.namePlateLinks{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+}
 
-  .namePlateLinks a{
-    flex: 1;
-    max-width: 200px;
-    padding: 3px;
-    text-align: center;
-  }
+.namePlateLinks a{
+  flex: 1;
+  max-width: 200px;
+  padding: 3px;
+  text-align: center;
+}
 
-  .homeGithubData{
-    height: 34vw;
-    overflow: auto;
-    padding: 10px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1rem;
-    align-content: flex-start;
-  }
+.homeGithubParent{
+  margin: 2rem;
+  height: 30rem;
+  overflow: auto;
+  padding: 1rem;
+}
 
-  .homeGitHubRepos{
-    width: calc(98%);
-    border: 1px solid #ccc;
-    background-color: #fff;
-    padding: 1rem;
-  }
+.homeGithubData{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  align-content: flex-start;
+}
+
+.homeGitHubRepos{
+  border: 1px solid #ccc;
+  background-color: #fff;
+  padding: 1rem;
+}
