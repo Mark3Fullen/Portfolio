@@ -1,19 +1,35 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { Octokit } from "@octokit/core";
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import PFP from './img/IMG_8024.jpg';
-import data from './repo_info.json'
-
 import './css/home.css';
 
 const NewHome = () => {
 
-    console.log(data);
+    const [repos, setRepos] = useState({})
+    console.log(repos)
 
-    let repos = data
+    useEffect(() => {
+        const octokit = new Octokit({
+            auth: process.env.REACT_APP_GITHUB_AUTH,
+          });
+      
+          octokit
+            .request("GET /user/repos", {
+                per_page: 100,
+            })
+            .then((res) => {
+                setRepos(res.data)
+            })
+            .catch((error) => {
+                console.error(error);
+            });
+      
+    }, []);
 
     return (
 
@@ -47,11 +63,11 @@ const NewHome = () => {
                     {repos ? 
                         repos.map(r => {
                             return (
-                                <Box className="homeGitHubRepos">
-                                    <a href={r.url}><GitHubIcon/></a>
+                                <Box className="homeGitHubRepos" key={`${r.name} + ${r.size}` }>
+                                    <a href={r.html_url}><GitHubIcon/></a>
                                     <Typography variant="h5">{r.name}</Typography>
                                     <Typography variant="h6">Size: {r.size} obj</Typography>
-                                    <Typography variant="h6">Created: {r.created}</Typography>
+                                    <Typography variant="h6">Created: {r.created_at}</Typography>
                                 </Box>
                             )
                         })
