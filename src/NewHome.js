@@ -23,7 +23,13 @@ const NewHome = () => {
                 per_page: 100,
             })
             .then((res) => {
-                setRepos(res.data)
+                console.log(res.status)
+                console.log(res.data)
+                if (res.status === 200) {
+                    setRepos(res.data)
+                } else {
+                    throw new Error("No Repos found!")
+                }  
             })
             .catch((error) => {
                 console.error(error);
@@ -60,7 +66,7 @@ const NewHome = () => {
                 <Typography></Typography>
 
                 <Box className="homeGithubData">
-                    {repos ? 
+                    {Object.keys(repos).length > 0 ?
                         repos.map(r => {
                             return (
                                 <Box className="homeGitHubRepos" key={`${r.name} + ${r.size}` }>
