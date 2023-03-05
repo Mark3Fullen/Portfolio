@@ -22,8 +22,6 @@ const NewHome = () => {
                 per_page: 1000,
             })
             .then((res) => {
-                console.log(res.status)
-                console.log(res.data)
                 if (res.status === 200) {
                     setRepos(res.data)
                 } else {
