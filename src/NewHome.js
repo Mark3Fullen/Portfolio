@@ -11,7 +11,6 @@ import './css/home.css';
 const NewHome = () => {
 
     const [repos, setRepos] = useState({})
-    console.log(repos)
 
     useEffect(() => {
         const octokit = new Octokit({
@@ -20,7 +19,7 @@ const NewHome = () => {
       
           octokit
             .request("GET /user/repos", {
-                per_page: 100,
+                per_page: 1000,
             })
             .then((res) => {
                 console.log(res.status)
