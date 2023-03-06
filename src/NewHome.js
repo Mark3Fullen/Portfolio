@@ -67,10 +67,14 @@ const NewHome = () => {
                         repos.map(r => {
                             return (
                                 <Box className="homeGitHubRepos" key={`${r.name} + ${r.size}` }>
-                                    <a href={r.html_url}><GitHubIcon/></a>
-                                    <Typography variant="h5">{r.name}</Typography>
-                                    <Typography variant="h6">Size: {r.size} obj</Typography>
-                                    <Typography variant="h6">Created: {r.created_at}</Typography>
+                                    <a href={r.html_url}>
+                                        <GitHubIcon className="homeGitHubReposIcon"/>
+                                        <div className="homeGitHubReposInfo">
+                                            <Typography variant="h5">{r.name}</Typography>
+                                            <Typography variant="h6">Size: {r.size} obj(s)</Typography>
+                                            <Typography variant="h6">Created: {r.created_at}</Typography>
+                                        </div>
+                                    </a>
                                 </Box>
                             )
                         })

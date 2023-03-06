@@ -68,3 +68,11 @@
   background-color: #fff;
   padding: 1rem;
 }
+
+.homeGitHubReposIcon{
+  float: right;
+}
+
+.homeGitHubReposInfo{
+  text-align: left;
+}
