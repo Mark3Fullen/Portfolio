@@ -43,6 +43,7 @@
 }
 
 .namePlateLinks a{
+  color: grey;
   flex: 1;
   max-width: 200px;
   padding: 3px;
@@ -71,8 +72,10 @@
 
 .homeGitHubReposIcon{
   float: right;
+  color: grey;
 }
 
 .homeGitHubReposInfo{
   text-align: left;
+  color: grey;
 }

@@ -34,6 +34,10 @@ const Sidebar = () => {
                             <button className="link">Resume</button>
                         </NavLink>
 
+                        <NavLink to="/repos">
+                            <button className="link">Repos</button>
+                        </NavLink>
+
                         {/* <NavLink to="/music">
                             <button className="link">Music</button>
                         </NavLink> */}
