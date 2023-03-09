@@ -6,7 +6,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import EmailIcon from '@mui/icons-material/Email';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import PFP from './img/IMG_8024.jpg';
+import PFP from './img/IMG_80241.jpg';
 import './css/home.css';
 
 const NewHome = () => {
