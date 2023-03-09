@@ -6,7 +6,7 @@ body {
   height: 100vh;
   margin: 0;
   font-family: 'Lucida Sans Unicode', sans-serif, Monospace;
-  background: linear-gradient(to left bottom, #020024, #303049, #00d4ff);
+  background: grey;
   background-attachment: fixed;
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
