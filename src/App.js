@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import { BrowserRouter, Route } from 'react-router-dom';
 import NewHome from './NewHome';
 import Sidebar from './Sidebar'
@@ -6,8 +6,15 @@ import Music from './components/Music';
 import Resume from './components/Resume';
 
 function App() {
+  
+  const [showContent, setShowContent] = useState(false);
+
+  useEffect(() => {
+    setShowContent(true);
+  }, []);
+
   return (
-    <div className="app">
+    <div className={`content ${showContent ? 'fade-in-and-move-up' : ''}`}>
 
       <BrowserRouter className="app">
 

@@ -4,12 +4,20 @@
 
 body {
   height: 100vh;
-  margin: 0;
+  margin: .05rem;
   font-family: 'Lucida Sans Unicode', sans-serif, Monospace;
   background: grey;
-  background-attachment: fixed;
-  background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
+}
+
+.content {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s, transform 1s;
+}
+
+.fade-in-and-move-up {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @keyframes gradient {
